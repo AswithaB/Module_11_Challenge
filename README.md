@@ -21,32 +21,6 @@ into any of these filter entry boxes. For a cleaner interface, the original
 1. Updated Version 2.0 of webpage which filters UFO Sightings on multiple criteria.
 2. This written report (README.md)
 
-### Resources
-
-- Software:
-	- Bootstrap 3 CSS Components loaded from Cloud via HTML
-	- D3.js JavaScript Library loaded from Cloud via HTML
-- Data:
-	- `data.js`: ANSI-ASCII Data File provided by client. Contains a single JavaScript Array `data`, which itself contains information pertaining to 111 purported UFO Sightings between January 1, 2010 and January 13, 2010. Each entry is described in 7 Fields: `datetime`, `city`, `state`, `country`, `shape`, `durationMinutes`, and `comments`. Additional information about these fields is summarized below in Table 1.
-- Other Resources:
-	- `index.html`: Webpage created in Module 11 Exercises. Copied and modified to remove `Filter Table` action button, and to add filter entry input boxes for additional criteria indicated in Version 2.0 webpage specifications.
-	- `ufo_starterCode.js`: JavaScript code template provided by client. Copied and renamed `app.js`. `app.js` was modified to include source code to perform functions indicated in Version 2.0 webpage specifications.
-	- `nasa.jpg`: Image provided by client for use as webpage Jumbotron background. Presumably obtained from NASA from the filename, but source is unattributed.
-
-**Table 1: data.js Fields**
-| Field Name               | Brief Description of Field and Contents|
-|--------------------------|----------------------------------------|
-| `datetime`               | Gregorian Calendar date, Formatted as 'mm/dd/yyyy'
-| `city`                   | City of observation [lowercase]
-| `state`                  | State or Province of observation [lowercase]
-| `country`                | Country of observation [lowercase]
-| `shape`                  | Shape of observation [lowercase]
-| `durationMinutes`        | Description of duration of observation, in minutes. Field is free text, and standards on original input have been loosely enforced. [lowercase, limited format orthodoxy]
-| `comments`               | Free Text comment providing additional information on observation. [Mixedcase, limited format orthodoxy]
-
-#### Data Quality
-One drawback as far as data quality is concerned of `data.js` is that the last three fields (`shape`, `durationMinutes`, and `comments`) are free text. This limits the possibilities for consistent analysis due to the wide-range of possible entries at the source. `shape`, for instance, currently has 18 different unique entries, one of which is 'unknown'. While this certainly may reflect the recollection of the UFO observer, it gives no useful information to the analyst. `durationMinutes` has entries as widely varying as 'unknown', 'not sure', '3 min', 'several hours', '10-15 seconds', to 'noticed from dusk to dawn'. If these time values are to be at all useful in future analysis, they should be significantly cleaned in a semi-automatic/manual process, and standards on input format should be more strictly enforced at time of collection. Furthermore it should be noted that there are Two (2) data entries in `durationMinutes` that are not enclosed in quotes to conform with the rest of the standard within `data.js`. They are presented as bare integers in the dataset. At present this causes no complication, but if they were attempted to be parsed as Strings, an unexpected result may occur.
-
 ## Results
 
 With the new Version 2.0 of the webpage working as requested, a user now has much greater flexibility to perform their own explorations of the provided data, at will.
